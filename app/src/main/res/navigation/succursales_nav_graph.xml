@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/succursales_nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="ca.qc.castroguilherme.succursales.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_accueilFragment"
+            app:destination="@id/accueilFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_enregistreNouvelEtudiantFragment"
+            app:destination="@id/enregistreNouvelEtudiantFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accueilFragment"
+        android:name="ca.qc.castroguilherme.succursales.AccueilFragment"
+        android:label="fragment_accueil"
+        tools:layout="@layout/fragment_accueil" >
+        <action
+            android:id="@+id/action_accueilFragment_to_ajouterSuccursaleFragment"
+            app:destination="@id/ajouterSuccursaleFragment" />
+        <action
+            android:id="@+id/action_accueilFragment_to_budgetFragment"
+            app:destination="@id/budgetFragment" />
+        <action
+            android:id="@+id/action_accueilFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <argument android:name="studentinho"
+            app:argType="ca.qc.castroguilherme.succursales.model.Student" />
+        <action
+            android:id="@+id/action_accueilFragment_to_favorisFragment"
+            app:destination="@id/favorisFragment" />
+        <action
+            android:id="@+id/action_accueilFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/ajouterSuccursaleFragment"
+        android:name="ca.qc.castroguilherme.succursales.AjouterSuccursaleFragment"
+        android:label="fragment_ajouter_succursale"
+        tools:layout="@layout/fragment_ajouter_succursale" >
+        <argument
+            android:name="auteur"
+            app:argType="ca.qc.castroguilherme.succursales.model.Aut" />
+    </fragment>
+    <fragment
+        android:id="@+id/budgetFragment"
+        android:name="ca.qc.castroguilherme.succursales.BudgetFragment"
+        android:label="fragment_budget"
+        tools:layout="@layout/fragment_budget" >
+        <argument
+            android:name="auteurr"
+            app:argType="ca.qc.castroguilherme.succursales.model.Aut" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="ca.qc.castroguilherme.succursales.EditFragment"
+        android:label="fragment_edit2"
+        tools:layout="@layout/fragment_edit2" >
+        <argument
+            android:name="succursale"
+            app:argType="ca.qc.castroguilherme.succursales.model.Succursale" />
+        <argument
+            android:name="auteur"
+            app:argType="ca.qc.castroguilherme.succursales.model.Aut" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorisFragment"
+        android:name="ca.qc.castroguilherme.succursales.FavorisFragment"
+        android:label="fragment_favoris"
+        tools:layout="@layout/fragment_favoris" >
+        <action
+            android:id="@+id/action_favorisFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <argument
+            android:name="auteur"
+            app:argType="ca.qc.castroguilherme.succursales.model.Aut" />
+    </fragment>
+    <fragment
+        android:id="@+id/enregistreNouvelEtudiantFragment"
+        android:name="ca.qc.castroguilherme.succursales.EnregistreNouvelEtudiantFragment"
+        android:label="EnregistreNouvelEtudiantFragment" >
+        <action
+            android:id="@+id/action_enregistreNouvelEtudiantFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>

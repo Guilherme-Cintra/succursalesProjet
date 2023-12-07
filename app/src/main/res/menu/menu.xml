@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ajouterSuccursaleFragment"
+        android:icon="@drawable/baseline_domain_add_24"
+        android:title="ajouter" />
+    <item
+        android:id="@+id/supprimerSuccursale"
+        android:icon="@drawable/baseline_delete_forever_24"
+        android:title="supprimer" />
+    <item
+        android:id="@+id/afficherBudget"
+        android:icon="@drawable/baseline_monetization_on_24"
+        android:title="voir budgets" />
+
+    <item
+        android:id="@+id/accueilFragment"
+        android:icon="@drawable/baseline_home_24"
+        android:title="accueil" />
+
+
+</menu>

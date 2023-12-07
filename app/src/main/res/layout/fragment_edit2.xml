@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditFragment">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="142dp"
+        android:layout_height="131dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/text_overlay"
+        android:outlineSpotShadowColor="@color/bleu"
+        android:src="@android:drawable/ic_menu_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bleu"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/editTitle" />
+
+    <TextView
+        android:id="@+id/nameSuccursaleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="79dp"
+
+        android:ems="10"
+        android:gravity="center"
+        android:text="Name"
+        android:textColor="@color/bleu"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <EditText
+        android:id="@+id/budgetSucText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:background="@drawable/text_overlay"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameSuccursaleTxt" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:width="200dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/bleu"
+        android:text="@string/editBtnTxt"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/budgetSucText"
+        app:layout_constraintStart_toStartOf="@+id/budgetSucText"
+        app:layout_constraintTop_toBottomOf="@+id/budgetSucText" />
+
+    <ImageView
+        android:id="@+id/imageHome"
+        android:layout_width="58dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/baseline_keyboard_backspace_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/revenirLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/revenirTxt"
+        android:textColor="@color/bleu"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageHome"
+        app:layout_constraintStart_toStartOf="@+id/imageHome"
+        app:layout_constraintTop_toBottomOf="@+id/imageHome" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
